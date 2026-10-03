@@ -59,5 +59,3 @@ sum(is.na(iris_new$Sepal.Length))
 #14 Impute the missing value in row 3 and column 1 of iris_new. To do so, replace the missing value by the mean of the remaining values in the corresponding column. Report an element in row 3 and column 1.
 iris_new[3, 1] <- mean(iris_new[, "Sepal.Length"], na.rm = TRUE)
 iris_new[3, 1]
-
-#15 Use R Markdown to create a Word (.docx) file to make a data analysis report for this Exercise.

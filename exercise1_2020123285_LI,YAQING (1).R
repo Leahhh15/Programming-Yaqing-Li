@@ -1,0 +1,65 @@
+##############
+##Exercise 1##
+##############
+
+
+#1
+set.seed(100)
+x <- runif(10, min = -10, max = 10)
+print(x)
+
+#2
+x <- sort(x, decreasing = TRUE)
+round(x)
+
+#3
+floor(x)
+
+#4
+ceiling(x)
+
+#5
+trunc(x)
+
+#6
+max_x <- max(x)
+min_x <- min(x)
+avg_x <- mean(x)
+x1 <- c(max_x, min_x, avg_x)
+print(x1)
+
+#7
+which.max(x)
+which.min(x)
+
+#8
+#a
+print(x[1:5])
+#b
+print(x[c(2, 8)])
+#b
+x[2]+x[8]
+
+#9
+y <- c("apple", "orange", "strawberry")
+
+#10
+z <- c(y, "peach")
+print(z)
+
+#11
+z1 <- paste(z, collapse = "; ")
+print(z1)
+
+#12
+#a
+a <- rep(c(2, 5), times = 10)
+a
+
+#b
+b <- rep(seq(1, 10, by = 3), times = 2)
+b
+
+#c
+c <- c(rep(3, 7), rep(7, 4))
+c

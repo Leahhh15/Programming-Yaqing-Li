@@ -1,4 +1,4 @@
-##Decision Tree R Lab: In-class Exercise 1##
+##Decision Tree R Lab: Exercise 1##
 
 rm(list = ls())
 

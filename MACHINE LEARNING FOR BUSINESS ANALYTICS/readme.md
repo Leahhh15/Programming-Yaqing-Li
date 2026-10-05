@@ -1,4 +1,4 @@
-# R Data Analysis & Machine Learning Portfolio
+# MACHINE LEARNING FOR BUSINESS ANALYTICS Portfolio
 
 A collection of R assignments and lab exercises covering data handling, data cleaning, statistical summarization, and machine learning models including Naïve Bayes, k-NN, decision trees, random forests, and neural networks.
 

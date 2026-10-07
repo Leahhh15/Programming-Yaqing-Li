@@ -1,5 +1,5 @@
 ########################################################
-## Interim Test 1: Mobile Commerce
+## Mobile Commerce
 ## Datasets: OnlineMember.dta, MobileMember.dta, MobileOrder.dta
 ########################################################
 

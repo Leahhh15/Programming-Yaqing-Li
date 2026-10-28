@@ -13,7 +13,8 @@ The portfolio documents my progression from **programming fundamentals and data 
 | Programming          | Python, R, NumPy           | Programming fundamentals, data structures, functions, file I/O     |
 | Data Analytics       | Python, R, pandas, dplyr   | Data cleaning, transformation, visualization, exploratory analysis |
 | Statistical Analysis | R, Python, scipy           | Hypothesis testing, correlation, statistical inference             |
-| Machine Learning     | R, Python, scikit-learn    | Classification, regression, model evaluation                       |
+| Machine Learning     | R, Python, scikit-learn, XGBoost | Classification, regression, model evaluation, Bayesian tuning |
+| Explainable AI (XAI) | SHAP                       | Model interpretation, feature attribution, cost-sensitive strategy |
 | Deep Learning        | Python, NumPy, PyTorch     | Neural networks, backpropagation, optimization, CNNs               |
 | Computer Vision      | PyTorch, torchvision, YOLO | Image classification, object detection, transfer learning          |
 | Research             | Python, PyTorch            | Model design, ablation studies, lightweight deep learning          |
@@ -50,6 +51,28 @@ The source code, training configuration, model components, and experimental impl
 *RRI-YOLO: A Lightweight Object Detection Model for UAV Small Objects Based on YOLOv10*
 
 **Status:** Under review at IEEE Access.
+
+**Code Availability:** The source code is currently not publicly available due to the ongoing peer-review process.
+---
+
+# Applied Machine Learning Projects
+
+## Gym Member Churn Prediction: Leveraging Behavioral Trajectories and Explainable Machine Learning
+
+**Project focus:** End-to-end machine learning pipeline for predicting early-stage member churn and optimizing retention strategies.
+
+This project uses 50,000 records of new members' first four weeks of behavioral data to build a robust classification model. It emphasizes advanced feature engineering, Bayesian hyperparameter optimization, and translating model interpretability into business value.
+
+### Key Components
+
+* **Exploratory Data Analysis:** Identified the "Week-1 Effect" (churn drops from 65.4% to 15.2% across attendance quartiles) and evaluated structural vs. demographic signals.
+* **Feature Engineering:** Built custom trajectory features (e.g., using `numpy.polyfit` to calculate attendance decay slopes) and composite engagement scores.
+* **Modeling & Tuning:** Compared Logistic Regression, Random Forest, and XGBoost. Applied Optuna (100 trials) which automatically converged XGBoost to a shallow structure (`max_depth=3`), matching the baseline linear model (Test AUC: 0.8208).
+* **Interpretability:** Used SHAP `TreeExplainer` to identify global drivers and individual risk profiles. 
+* **Business Impact:** Implemented cost-sensitive threshold optimization (FN=$150, FP=$20). Adjusted the decision threshold to 0.120, raising Recall to 98.1% and reducing expected operational costs by 58.2% ($216,710 to $90,480).
+* **Tech Stack:** Python, scikit-learn, XGBoost, Optuna, SHAP, pandas.
+
+*(Refer to the `gym-churn-prediction` repository for the full code and visualizations.)*
 
 ---
 
@@ -235,7 +258,7 @@ Data Wrangling & Visualization
         ↓
 Statistical Analysis
         ↓
-Classical Machine Learning
+Classical Machine Learning & Explainable AI
         ↓
 Neural Networks from Scratch
         ↓
@@ -244,123 +267,3 @@ Deep Learning & Transfer Learning
 Computer Vision
         ↓
 Independent Object Detection Research
-```
-
-This progression reflects a transition from **using code to analyze data** toward **building, understanding, and evaluating computational models**.
-
----
-
-# Technical Skills
-
-## Programming
-
-* Python
-* R
-* NumPy
-* pandas
-* dplyr
-* tidyr
-* Data structures
-* Functions
-* File I/O
-
-## Data Analytics
-
-* Data cleaning
-* Exploratory data analysis
-* Data transformation
-* Missing-value handling
-* Outlier detection
-* Feature engineering
-* Multi-source data integration
-* Data visualization
-
-## Statistics
-
-* Descriptive statistics
-* Pearson correlation
-* Welch's t-test
-* Chi-square test
-* Statistical inference
-
-## Machine Learning
-
-* Naïve Bayes
-* k-NN
-* Decision Trees
-* Random Forest
-* Neural Networks
-* Classification
-* Regression
-* Model evaluation
-* ROC/AUC
-* RMSE
-
-## Deep Learning
-
-* Neural networks from scratch
-* Forward propagation
-* Backpropagation
-* Computational graphs
-* Optimization algorithms
-* Weight initialization
-* Batch Normalization
-* CNNs
-* Transfer learning
-* PyTorch
-* torchvision
-
-## Computer Vision
-
-* Image classification
-* CNNs
-* Transfer learning
-* Object detection
-* YOLO
-* Small-object detection
-* Model architecture design
-* Ablation studies
-
----
-
-# Languages & Tools
-
-**Languages**
-
-`Python` · `R`
-
-**Data & Scientific Computing**
-
-`NumPy` · `pandas` · `SciPy`
-
-**Visualization**
-
-`Matplotlib` · `Seaborn` · `ggplot2`
-
-**Machine Learning**
-
-`scikit-learn`
-
-**Deep Learning**
-
-`PyTorch` · `torchvision`
-
-**R Ecosystem**
-
-`dplyr` · `tidyr` · `foreign`
-
-**Computer Vision**
-
-`YOLO` · `OpenCV`
-
----
-
-# About This Portfolio
-
-The projects include both **business-oriented analytical problems** and **general machine learning and computer vision research**.
-
-Together, they demonstrate a progression across:
-
-**programming → analytics → machine learning → deep learning → computer vision → research**
-
-The portfolio is intended to document both **technical breadth and increasing depth**, from foundational programming and statistical analysis to implementing neural networks and developing an independent object-detection research project.
